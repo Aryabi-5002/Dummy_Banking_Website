@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dummy bank Customer Sign up</title>
+<link href="Customersignup.css" rel="stylesheet">
+<link href="Home.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<header class="main">
+    <h1 style="color:white">Customer Signup</h1>
+</header>
+	
+
+	<nav>
+    <a href="Home.html">Home</a>
+    <a href="Aboutus.html">About</a>
+    <a href="Customerlogin.html">Login</a>
+    <a href="Customersignup.html">Signup</a>
+</nav>
+
+	
+ <div class="signupu" style="">
+	 <form action="customersignup" method="post" id="handler" >
+		 <div class="container">
+	  <label for="custname">Customer name</label> <input id="custname" type="text"  name="custname" placeholder="enter  name"><br>
+    
+    <label for="mobile">Customer Mobile</label> <input id="mob" type="text" name="mobile" placeholder="enter  Mobile"><br>
+    <label for="email">Customer Email </label><input id="email" type="text" name="email" placeholder="enter  Email"><br>
+    <label for="gender">Gender :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="gender" type="radio" name="gender" value="male" required="required">Male:
+   &nbsp;&nbsp;&nbsp; <input id="gender" type="radio" name="gender" value="female" required="required">Female:<br><br>
+    <label for="dob">D.O.B</label>&nbsp;&nbsp;<input id="dob" type="date" name="dob" required><br><br>
+    <label for="password">Password</label> <input id="password" type="text" name="password" placeholder="enter  Password"><br>
+		 <div id="button" style="display: flex;justify-content: space-evenly;"><input class="signupbtn" type="submit" value="Sign up"><input class="cancelbtn" type="reset" value="cancel"></div>
+		 </div>
+ </form>
+ </div>
+ 
+ </main>
+ 
+ <footer style=" background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;">
+      <p>&copy; 2023 Bank Website. All rights reserved.</p>
+    </footer>
+    
+  
+ 
+</body>
+</html>
