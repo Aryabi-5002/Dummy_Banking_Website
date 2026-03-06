@@ -21,6 +21,7 @@
 
     if (customer != null && customer.getList() != null) {
         accountCount = customer.getList().size();
+        List<BankAccount> acclist=customer.getList();
     }
 %>
 
@@ -33,12 +34,12 @@
         <a href="Checkbalance.jsp">Check Balance</a>
         <a href="Transaction.jsp">Transactions</a>
         <a href="Accounts.jsp">Accounts</a>
-        <button id="logoutBtn">Logout</button>
+        
 
     </nav>
 
     <!-- Show Create Account ONLY if 0 or 1 account -->
-    <% if (accountCount < 2) { %>
+    <% if (accountCount ==0) { %>
         <div class="container">
             <h3>Create New Account</h3>
 
@@ -62,7 +63,7 @@
 <% } else { %>
 
     <div class="container">
-        <p style="color:red;">Please login first.</p>
+        <a style="color:red;" href="Home.html">Please login first.</a>
     </div>
 
 <% } %>
@@ -74,6 +75,12 @@
         to manage your funds and view transaction history.
     </p>
 </div>
+<div style="align-items: center;     /* Centers vertically */
+  justify-content: center;     padding-left:45%;
+  /* Centers horizontally */    margin: 100px auto;
+  
+"> <button id="logoutBtn">Logout</button></div>
+
 <script>
 document.getElementById("logoutBtn").addEventListener("click", function() {
     // Redirect the browser to the logout URL (GET request)

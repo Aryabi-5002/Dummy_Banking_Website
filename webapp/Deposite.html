@@ -8,7 +8,9 @@
 
 <header>
     <h1 style="color:white">Deposit Amount</h1>
+    <h3 style="color:white"><a href="Customerhome.jsp">Customer Dash board</a></h3>
 </header>
+<div id="serverResponse"></div>
 
 <div class="container">
   <form id="depositForm">
@@ -18,7 +20,7 @@
     </div>
 
     <div style="margin-bottom: 10px;">
-      <label for="amount">Withdraw Amount</label><br>
+      <label for="amount">Deposite Amount</label><br>
       <input type="number" id="amount" name="amount" required>
     </div>
 
@@ -42,7 +44,9 @@ document.getElementById("depositForm").addEventListener("submit", function (e) {
               "&amount=" + encodeURIComponent(amount)
     })
     .then(res => res.text())
-    .then(result => console.log("Server response:", result))
+    .then(result => {
+        document.getElementById("serverResponse").innerHTML = result;
+    })
     .catch(err => console.error(err));
 });
 </script>

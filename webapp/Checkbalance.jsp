@@ -10,6 +10,7 @@
 
 <header>
     <h1 style="color:white">Account Balance</h1>
+    <h3 style=color:white><a href="Customerhome.jsp">Customer Dashboard</a></h3>
 </header>
 
 <div class="container">
@@ -48,6 +49,7 @@
             }
 
             if (matchedAccount != null) {
+            	if(matchedAccount.isStatus()){
 %>
 <div class="container">
     <p><strong>Account Number:</strong> <%= matchedAccount.getAcc_no() %></p>
@@ -56,7 +58,15 @@
     <p>This balance reflects your most recent transactions.</p>
 </div>
 <%
-            } else {
+            	}
+            	else{
+            		%>
+            		<div class="container">
+            		    <p style="color:red;">This Account is not approved yet</p>
+            		</div>
+            		<%
+            	}
+            	} else {
 %>
 <div class="container">
     <p style="color:red;">No account found with this Account Number for your profile.</p>

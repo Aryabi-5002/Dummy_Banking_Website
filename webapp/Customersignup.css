@@ -7,3 +7,6 @@ input {
     border-radius: 6px;
     border: 1px solid #ddd6fe;
 }
+button:hover {
+    opacity: 0.9;
+}

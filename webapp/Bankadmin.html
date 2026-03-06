@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="home.css">
+    <title>Admin login</title>
+    <link rel="stylesheet" href="Home.css">
 </head>
 <body>
 
 <header>
-    <h1>Bank Administrator</h1>
+    <h1 style="color:white">Bank Administrator</h1>
     <p>System Overview & Controls</p>
 </header>
 
@@ -15,15 +15,24 @@
     <h2>Admin Actions</h2>
 
     <ul>
-        <li>View all customer accounts</li>
-        <li>Monitor transactions</li>
-        <li>Approve or block accounts</li>
-        <li>Generate reports</li>
+        
+        <li><a href="All_Accounts.jsp">View all customer accounts</a></li>
+        <li><a href="All_Transactions.jsp">Monitor Transactions</a></li>
+        <li><a href="Status_checking.jsp">Approve or block accounts</a></li>
     </ul>
 
     <br>
-    <button>Go to Reports</button>
+    <button id="logoutBtn">Log out</button>
 </div>
+<footer>
+    © 2026 Banking App
+</footer>
 
 </body>
+<script>
+document.getElementById("logoutBtn").addEventListener("click", function() {
+    // Redirect the browser to the logout URL (GET request)
+    window.location.href = 'http://localhost:8080/banking/logout';
+});
+</script>
 </html>
